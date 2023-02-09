@@ -1,0 +1,71 @@
+body
+    max-width: 1140px
+    margin: 0 auto
+
+.mainTitle
+    text-align: center
+
+.countryList
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    
+    #countryList__ul
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        list-style-type: none
+        margin: 0
+        padding: 0
+
+        .countryCard
+            border: 1px solid black
+            border-radius: 10px
+            width: 100%
+            max-width: 300px
+            height: 100%
+            max-height: 200px
+            padding: 10px
+            margin: 10px
+            background-color: transparent
+            perspective: 1000px
+
+            &.Africa
+                background-color: lightgreen
+            &.Americas
+                background-color: lightyellow
+            &.Asia
+                background-color: #ffcccb
+            &.Europe
+                background-color: lavender
+            &.Oceania
+                background-color: lightblue
+
+            .countryCard__flag
+                width: 300px
+                height: 200px
+            
+            &:hover .countryCard__inner
+                transform: rotateY(180deg)
+
+            .countryCard__inner
+                transition: transform 0.8s
+                position: relative
+                width: 100%
+                height: 100%
+                text-align: center
+                transform-style: preserve-3d
+
+                
+                .countryCard__front, .countryCard__back
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    backface-visibility: hidden
+                    -webkit-backface-visibility: hidden
+
+
+                .countryCard__back
+                    transform: rotate(180deg)
+
+
