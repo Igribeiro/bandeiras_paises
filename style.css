@@ -70,5 +70,5 @@ body {
   -webkit-backface-visibility: hidden;
 }
 .countryList #countryList__ul .countryCard .countryCard__inner .countryCard__back {
-  transform: rotate(180deg);
+  transform: rotateY(180deg);
 }/*# sourceMappingURL=style.css.map */
